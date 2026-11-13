@@ -1,0 +1,16 @@
+# Runtime dependencies pinned to the versions used to train/save the included models.
+# Use the official CPU-only PyTorch wheel on Linux hosting.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+streamlit==1.66.1
+torch==2.15.0+cpu
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+scikit-learn==1.9.1
+xgboost==3.4.1
+joblib==1.6.0
+pyarrow==26.0.0
+matplotlib==3.11.2
+shap==0.54.1
+plotly==7.1.0

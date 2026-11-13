@@ -1,0 +1,254 @@
+{
+  "module": "performance",
+  "source": "real",
+  "n_rows": 4244,
+  "target": "Curricular units 2nd sem (approved)",
+  "settings": {
+    "start": {
+      "label": "Before any exam results",
+      "test": {
+        "Typical pass rate (no model)": {
+          "rmse": 2.284714992868989,
+          "mae": 1.8961216689255729,
+          "r2": 0.4007893053479603,
+          "within_1_subject": 0.44583987441130296,
+          "backlog_mae": 1.8961216689255729
+        },
+        "Ridge Regression": {
+          "rmse": 1.9019526712813655,
+          "mae": 1.456292224900147,
+          "r2": 0.5847449679118356,
+          "within_1_subject": 0.6043956043956044,
+          "backlog_mae": 1.456292224900147
+        },
+        "Random Forest": {
+          "rmse": 1.95829077191197,
+          "mae": 1.4719137818883186,
+          "r2": 0.5597799209198044,
+          "within_1_subject": 0.6357927786499215,
+          "backlog_mae": 1.4719137818883186
+        },
+        "XGBoost": {
+          "rmse": 1.8710554699802586,
+          "mae": 1.4114350199792973,
+          "r2": 0.5981270095667394,
+          "within_1_subject": 0.6530612244897959,
+          "backlog_mae": 1.4114350199792973
+        },
+        "MLP (deep learning)": {
+          "rmse": 1.8850418575894883,
+          "mae": 1.431856988176259,
+          "r2": 0.5920964461384857,
+          "within_1_subject": 0.640502354788069,
+          "backlog_mae": 1.431856988176259,
+          "train_seconds": 14.9,
+          "best_epoch": 38
+        }
+      },
+      "cv": {
+        "Typical pass rate (no model)": {
+          "rmse_mean": 2.2613296957573867,
+          "rmse_std": 0.036546541640672815
+        },
+        "Ridge Regression": {
+          "rmse_mean": 1.891991566353326,
+          "rmse_std": 0.018372482439284153
+        },
+        "Random Forest": {
+          "rmse_mean": 1.9273507905701066,
+          "rmse_std": 0.04496952730620654
+        },
+        "XGBoost": {
+          "rmse_mean": 1.8550674728917684,
+          "rmse_std": 0.03598157134396328
+        },
+        "MLP (deep learning)": {
+          "rmse_mean": 1.87510119951379,
+          "rmse_std": 0.03793413240534305
+        }
+      },
+      "n_train": 2970,
+      "n_val": 637,
+      "n_test": 637,
+      "n_inputs": 12,
+      "std_target": 2.9514963715187967,
+      "permutation_importance_top10": [
+        {
+          "feature": "Curricular units 2nd sem (enrolled)",
+          "importance": 0.9814659953596864,
+          "std": 0.05801219433626856
+        },
+        {
+          "feature": "Tuition fees up to date",
+          "importance": 0.1805460346630865,
+          "std": 0.024550524554297615
+        },
+        {
+          "feature": "Curricular units 2nd sem (credited)",
+          "importance": 0.14797518959867562,
+          "std": 0.01426157048624412
+        },
+        {
+          "feature": "Scholarship holder",
+          "importance": 0.07368519251132825,
+          "std": 0.02694766123209551
+        },
+        {
+          "feature": "Course",
+          "importance": 0.06550860158728662,
+          "std": 0.010964128185131724
+        },
+        {
+          "feature": "Application mode",
+          "importance": 0.06112252055771276,
+          "std": 0.012507430986602971
+        },
+        {
+          "feature": "Age at enrollment",
+          "importance": 0.042609927035314965,
+          "std": 0.01411918696256668
+        },
+        {
+          "feature": "Daytime/evening attendance",
+          "importance": 0.036602710189802955,
+          "std": 0.014144208001904968
+        },
+        {
+          "feature": "Previous qualification",
+          "importance": 0.025464296608866583,
+          "std": 0.0016009571692975043
+        },
+        {
+          "feature": "Debtor",
+          "importance": 0.010987759271237704,
+          "std": 0.005253351740823011
+        }
+      ],
+      "shap_top10": null,
+      "tuned_params": null
+    },
+    "sem1": {
+      "label": "After semester 1",
+      "test": {
+        "Typical pass rate (no model)": {
+          "rmse": 2.284714992868989,
+          "mae": 1.8961216689255729,
+          "r2": 0.4007893053479603,
+          "within_1_subject": 0.44583987441130296,
+          "backlog_mae": 1.8961216689255729
+        },
+        "Ridge Regression": {
+          "rmse": 1.013191883883711,
+          "mae": 0.6899355254802824,
+          "r2": 0.8821583276456121,
+          "within_1_subject": 0.880690737833595,
+          "backlog_mae": 0.6899355254802824
+        },
+        "Random Forest": {
+          "rmse": 1.0228665490505071,
+          "mae": 0.6451514015071563,
+          "r2": 0.8798971136037378,
+          "within_1_subject": 0.8822605965463108,
+          "backlog_mae": 0.6451514015071563
+        },
+        "XGBoost": {
+          "rmse": 0.9703860167890666,
+          "mae": 0.6445433971091222,
+          "r2": 0.8919052622569179,
+          "within_1_subject": 0.8963893249607535,
+          "backlog_mae": 0.6445433971091222
+        },
+        "MLP (deep learning)": {
+          "rmse": 0.9617406361403124,
+          "mae": 0.6498803882808476,
+          "r2": 0.8938227615116316,
+          "within_1_subject": 0.9010989010989011,
+          "backlog_mae": 0.6498803882808476,
+          "train_seconds": 8.0,
+          "best_epoch": 35
+        }
+      },
+      "cv": {
+        "Typical pass rate (no model)": {
+          "rmse_mean": 2.2613296957573867,
+          "rmse_std": 0.036546541640672815
+        },
+        "Ridge Regression": {
+          "rmse_mean": 1.1145233668301286,
+          "rmse_std": 0.061014600397896745
+        },
+        "Random Forest": {
+          "rmse_mean": 1.1329457183720457,
+          "rmse_std": 0.05779161001630781
+        },
+        "XGBoost": {
+          "rmse_mean": 1.098195686973284,
+          "rmse_std": 0.06410312770551596
+        },
+        "MLP (deep learning)": {
+          "rmse_mean": 1.1057771260139595,
+          "rmse_std": 0.038542577438579
+        }
+      },
+      "n_train": 2970,
+      "n_val": 637,
+      "n_test": 637,
+      "n_inputs": 18,
+      "std_target": 2.9514963715187967,
+      "permutation_importance_top10": [
+        {
+          "feature": "Curricular units 1st sem (approved)",
+          "importance": 1.820785857281857,
+          "std": 0.037851078350567814
+        },
+        {
+          "feature": "Curricular units 2nd sem (enrolled)",
+          "importance": 0.9658842368419444,
+          "std": 0.043976902326315855
+        },
+        {
+          "feature": "Curricular units 1st sem (grade)",
+          "importance": 0.3702872481632267,
+          "std": 0.031895482539361635
+        },
+        {
+          "feature": "Curricular units 2nd sem (credited)",
+          "importance": 0.22321474194653032,
+          "std": 0.01747610804718045
+        },
+        {
+          "feature": "Curricular units 1st sem (credited)",
+          "importance": 0.1487738045514405,
+          "std": 0.01904983075222198
+        },
+        {
+          "feature": "Curricular units 1st sem (enrolled)",
+          "importance": 0.09953878466072752,
+          "std": 0.014150941364391897
+        },
+        {
+          "feature": "Course",
+          "importance": 0.06488362527665807,
+          "std": 0.013592431554841425
+        },
+        {
+          "feature": "Tuition fees up to date",
+          "importance": 0.033108585313827286,
+          "std": 0.010203864387842085
+        },
+        {
+          "feature": "Age at enrollment",
+          "importance": 0.021928847693049685,
+          "std": 0.005026526883560235
+        },
+        {
+          "feature": "Scholarship holder",
+          "importance": 0.016221284463114088,
+          "std": 0.005432832782412258
+        }
+      ],
+      "shap_top10": null,
+      "tuned_params": null
+    }
+  }
+}

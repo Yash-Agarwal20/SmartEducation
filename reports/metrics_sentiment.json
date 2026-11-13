@@ -1,0 +1,106 @@
+{
+  "module": "sentiment",
+  "source": "real",
+  "n_rows": 12000,
+  "n_train": 8399,
+  "n_val": 1801,
+  "n_test": 1800,
+  "test": {
+    "TF-IDF + Logistic Regression": {
+      "accuracy": 0.7072222222222222,
+      "macro_f1": 0.7083563569634267,
+      "roc_auc": 0.8682027777777778,
+      "per_class": {
+        "Negative": {
+          "precision": 0.6763358778625954,
+          "recall": 0.7383333333333333,
+          "f1": 0.7059760956175298,
+          "support": 600
+        },
+        "Neutral": {
+          "precision": 0.5901360544217688,
+          "recall": 0.5783333333333334,
+          "f1": 0.5841750841750841,
+          "support": 600
+        },
+        "Positive": {
+          "precision": 0.8671454219030521,
+          "recall": 0.805,
+          "f1": 0.8349178910976663,
+          "support": 600
+        }
+      }
+    },
+    "Embedding + BiLSTM (deep learning)": {
+      "accuracy": 0.7027777777777777,
+      "macro_f1": 0.7049212698274676,
+      "roc_auc": 0.8703025462962962,
+      "per_class": {
+        "Negative": {
+          "precision": 0.7045454545454546,
+          "recall": 0.6716666666666666,
+          "f1": 0.6877133105802048,
+          "support": 600
+        },
+        "Neutral": {
+          "precision": 0.586890243902439,
+          "recall": 0.6416666666666667,
+          "f1": 0.6130573248407644,
+          "support": 600
+        },
+        "Positive": {
+          "precision": 0.833916083916084,
+          "recall": 0.795,
+          "f1": 0.8139931740614335,
+          "support": 600
+        }
+      },
+      "train_seconds": 163.7,
+      "best_epoch": 3
+    }
+  },
+  "top_words_baseline": {
+    "Negative": [
+      "not",
+      "no",
+      "poor",
+      "boring",
+      "too",
+      "nothing",
+      "money",
+      "doesn",
+      "poorly",
+      "anything",
+      "waste",
+      "without"
+    ],
+    "Neutral": [
+      "but",
+      "more",
+      "however",
+      "not so",
+      "good",
+      "bit",
+      "not bad",
+      "some",
+      "still",
+      "although",
+      "decent",
+      "little"
+    ],
+    "Positive": [
+      "great",
+      "excellent",
+      "very good",
+      "awesome",
+      "best",
+      "amazing",
+      "love",
+      "perfect",
+      "course",
+      "very helpful",
+      "wonderful",
+      "fantastic"
+    ]
+  }
+}

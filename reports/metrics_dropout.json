@@ -1,0 +1,614 @@
+{
+  "module": "dropout",
+  "source": "real",
+  "n_rows": 4424,
+  "imbalance": "weights",
+  "settings": {
+    "start": {
+      "label": "Before any exam results",
+      "n_train": 3096,
+      "n_val": 664,
+      "n_test": 664,
+      "n_inputs": 12,
+      "test": {
+        "Logistic Regression": {
+          "accuracy": 0.5753012048192772,
+          "macro_f1": 0.5397246311474752,
+          "roc_auc": 0.7573448470600317,
+          "dropout_recall": 0.5633802816901409,
+          "dropout_precision": 0.6185567010309279,
+          "dropout_f1": 0.5896805896805897,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.6185567010309279,
+              "recall": 0.5633802816901409,
+              "f1": 0.5896805896805897,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.2918918918918919,
+              "recall": 0.453781512605042,
+              "f1": 0.35526315789473684,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.7298245614035088,
+              "recall": 0.6265060240963856,
+              "f1": 0.6742301458670988,
+              "support": 332
+            }
+          }
+        },
+        "Random Forest": {
+          "accuracy": 0.6219879518072289,
+          "macro_f1": 0.5870085684807455,
+          "roc_auc": 0.7652828675654498,
+          "dropout_recall": 0.6244131455399061,
+          "dropout_precision": 0.6456310679611651,
+          "dropout_f1": 0.6348448687350835,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.6456310679611651,
+              "recall": 0.6244131455399061,
+              "f1": 0.6348448687350835,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.3614457831325301,
+              "recall": 0.5042016806722689,
+              "f1": 0.42105263157894735,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.7534246575342466,
+              "recall": 0.6626506024096386,
+              "f1": 0.7051282051282052,
+              "support": 332
+            }
+          }
+        },
+        "XGBoost": {
+          "accuracy": 0.608433734939759,
+          "macro_f1": 0.5797895027715477,
+          "roc_auc": 0.7691860862532138,
+          "dropout_recall": 0.6056338028169014,
+          "dropout_precision": 0.6683937823834197,
+          "dropout_f1": 0.6354679802955665,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.6683937823834197,
+              "recall": 0.6056338028169014,
+              "f1": 0.6354679802955665,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.34594594594594597,
+              "recall": 0.5378151260504201,
+              "f1": 0.42105263157894735,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.7377622377622378,
+              "recall": 0.6355421686746988,
+              "f1": 0.6828478964401294,
+              "support": 332
+            }
+          }
+        },
+        "MLP (deep learning)": {
+          "accuracy": 0.6009036144578314,
+          "macro_f1": 0.5701842650793078,
+          "roc_auc": 0.7634572059477837,
+          "dropout_recall": 0.5023474178403756,
+          "dropout_precision": 0.722972972972973,
+          "dropout_f1": 0.592797783933518,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.722972972972973,
+              "recall": 0.5023474178403756,
+              "f1": 0.592797783933518,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.3209302325581395,
+              "recall": 0.5798319327731093,
+              "f1": 0.41317365269461076,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.7408637873754153,
+              "recall": 0.6716867469879518,
+              "f1": 0.7045813586097947,
+              "support": 332
+            }
+          },
+          "train_seconds": 6.7,
+          "best_epoch": 8
+        }
+      },
+      "full_mlp_metrics": {
+        "accuracy": 0.6009036144578314,
+        "macro_f1": 0.5701842650793078,
+        "per_class": {
+          "Dropout": {
+            "precision": 0.722972972972973,
+            "recall": 0.5023474178403756,
+            "f1": 0.592797783933518,
+            "support": 213
+          },
+          "Enrolled": {
+            "precision": 0.3209302325581395,
+            "recall": 0.5798319327731093,
+            "f1": 0.41317365269461076,
+            "support": 119
+          },
+          "Graduate": {
+            "precision": 0.7408637873754153,
+            "recall": 0.6716867469879518,
+            "f1": 0.7045813586097947,
+            "support": 332
+          }
+        },
+        "roc_auc": 0.7634572059477837
+      },
+      "permutation_importance_top10": [
+        {
+          "feature": "Tuition fees up to date",
+          "importance": 0.1020659120690937,
+          "std": 0.012332534468907336
+        },
+        {
+          "feature": "Course",
+          "importance": 0.05377044662508786,
+          "std": 0.011112669574883991
+        },
+        {
+          "feature": "Curricular units 2nd sem (enrolled)",
+          "importance": 0.02869125210877138,
+          "std": 0.003222002441660405
+        },
+        {
+          "feature": "Scholarship holder",
+          "importance": 0.026931866614303784,
+          "std": 0.0061919115580855826
+        },
+        {
+          "feature": "Previous qualification",
+          "importance": 0.021404354890898147,
+          "std": 0.005323651882126014
+        },
+        {
+          "feature": "Age at enrollment",
+          "importance": 0.019776254533187692,
+          "std": 0.0076127723882082905
+        },
+        {
+          "feature": "Curricular units 2nd sem (credited)",
+          "importance": 0.015067155218358755,
+          "std": 0.004943823104045465
+        },
+        {
+          "feature": "Displaced",
+          "importance": 0.012528879525812942,
+          "std": 0.004744478387581759
+        },
+        {
+          "feature": "Debtor",
+          "importance": 0.010814360511936813,
+          "std": 0.005020237616714685
+        },
+        {
+          "feature": "Application mode",
+          "importance": 0.002989721708722526,
+          "std": 0.0058237784853300495
+        }
+      ],
+      "shap_top10": null,
+      "tuned_params": null
+    },
+    "sem1": {
+      "label": "After semester 1",
+      "n_train": 3096,
+      "n_val": 664,
+      "n_test": 664,
+      "n_inputs": 18,
+      "test": {
+        "Logistic Regression": {
+          "accuracy": 0.7033132530120482,
+          "macro_f1": 0.6662689726123627,
+          "roc_auc": 0.8655743110484376,
+          "dropout_recall": 0.6666666666666666,
+          "dropout_precision": 0.7932960893854749,
+          "dropout_f1": 0.7244897959183674,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.7932960893854749,
+              "recall": 0.6666666666666666,
+              "f1": 0.7244897959183674,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.3891891891891892,
+              "recall": 0.6050420168067226,
+              "f1": 0.47368421052631576,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.8433333333333334,
+              "recall": 0.7620481927710844,
+              "f1": 0.8006329113924051,
+              "support": 332
+            }
+          }
+        },
+        "Random Forest": {
+          "accuracy": 0.7123493975903614,
+          "macro_f1": 0.6701209918243878,
+          "roc_auc": 0.8644236292211346,
+          "dropout_recall": 0.6666666666666666,
+          "dropout_precision": 0.7513227513227513,
+          "dropout_f1": 0.7064676616915423,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.7513227513227513,
+              "recall": 0.6666666666666666,
+              "f1": 0.7064676616915423,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.4117647058823529,
+              "recall": 0.5882352941176471,
+              "f1": 0.4844290657439446,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.8557377049180328,
+              "recall": 0.786144578313253,
+              "f1": 0.8194662480376766,
+              "support": 332
+            }
+          }
+        },
+        "XGBoost": {
+          "accuracy": 0.7108433734939759,
+          "macro_f1": 0.6687817876679863,
+          "roc_auc": 0.8633910616011602,
+          "dropout_recall": 0.6713615023474179,
+          "dropout_precision": 0.7814207650273224,
+          "dropout_f1": 0.7222222222222222,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.7814207650273224,
+              "recall": 0.6713615023474179,
+              "f1": 0.7222222222222222,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.39204545454545453,
+              "recall": 0.5798319327731093,
+              "f1": 0.46779661016949153,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.8524590163934426,
+              "recall": 0.7831325301204819,
+              "f1": 0.8163265306122449,
+              "support": 332
+            }
+          }
+        },
+        "MLP (deep learning)": {
+          "accuracy": 0.7153614457831325,
+          "macro_f1": 0.678305746667796,
+          "roc_auc": 0.8664405742405815,
+          "dropout_recall": 0.6150234741784038,
+          "dropout_precision": 0.8397435897435898,
+          "dropout_f1": 0.7100271002710027,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.8397435897435898,
+              "recall": 0.6150234741784038,
+              "f1": 0.7100271002710027,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.40512820512820513,
+              "recall": 0.6638655462184874,
+              "f1": 0.5031847133757962,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.8466453674121406,
+              "recall": 0.7981927710843374,
+              "f1": 0.8217054263565892,
+              "support": 332
+            }
+          },
+          "train_seconds": 7.4,
+          "best_epoch": 17
+        }
+      },
+      "full_mlp_metrics": {
+        "accuracy": 0.7153614457831325,
+        "macro_f1": 0.678305746667796,
+        "per_class": {
+          "Dropout": {
+            "precision": 0.8397435897435898,
+            "recall": 0.6150234741784038,
+            "f1": 0.7100271002710027,
+            "support": 213
+          },
+          "Enrolled": {
+            "precision": 0.40512820512820513,
+            "recall": 0.6638655462184874,
+            "f1": 0.5031847133757962,
+            "support": 119
+          },
+          "Graduate": {
+            "precision": 0.8466453674121406,
+            "recall": 0.7981927710843374,
+            "f1": 0.8217054263565892,
+            "support": 332
+          }
+        },
+        "roc_auc": 0.8664405742405815
+      },
+      "permutation_importance_top10": [
+        {
+          "feature": "Curricular units 1st sem (approved)",
+          "importance": 0.20797172708926417,
+          "std": 0.020918046359294357
+        },
+        {
+          "feature": "Tuition fees up to date",
+          "importance": 0.05439328893177233,
+          "std": 0.015676610436203414
+        },
+        {
+          "feature": "Curricular units 1st sem (evaluations)",
+          "importance": 0.038932571323941643,
+          "std": 0.008256504876368061
+        },
+        {
+          "feature": "Course",
+          "importance": 0.03413519461369555,
+          "std": 0.011176565655426138
+        },
+        {
+          "feature": "Curricular units 1st sem (grade)",
+          "importance": 0.025278745931061036,
+          "std": 0.006438530696526798
+        },
+        {
+          "feature": "Curricular units 1st sem (enrolled)",
+          "importance": 0.023634174255623624,
+          "std": 0.00625893773876292
+        },
+        {
+          "feature": "Curricular units 2nd sem (enrolled)",
+          "importance": 0.01565263171775431,
+          "std": 0.003612992921214677
+        },
+        {
+          "feature": "Debtor",
+          "importance": 0.015185947523808363,
+          "std": 0.006957827344753342
+        },
+        {
+          "feature": "Application mode",
+          "importance": 0.015119997170445043,
+          "std": 0.01038065154556871
+        },
+        {
+          "feature": "Previous qualification",
+          "importance": 0.013848446591956906,
+          "std": 0.007429630364246199
+        }
+      ],
+      "shap_top10": null,
+      "tuned_params": null
+    },
+    "sem2": {
+      "label": "After semester 2",
+      "n_train": 3096,
+      "n_val": 664,
+      "n_test": 664,
+      "n_inputs": 22,
+      "test": {
+        "Logistic Regression": {
+          "accuracy": 0.7364457831325302,
+          "macro_f1": 0.6965159836805958,
+          "roc_auc": 0.8867566589888333,
+          "dropout_recall": 0.6901408450704225,
+          "dropout_precision": 0.8121546961325967,
+          "dropout_f1": 0.7461928934010152,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.8121546961325967,
+              "recall": 0.6901408450704225,
+              "f1": 0.7461928934010152,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.42134831460674155,
+              "recall": 0.6302521008403361,
+              "f1": 0.5050505050505051,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.8754098360655738,
+              "recall": 0.8042168674698795,
+              "f1": 0.8383045525902669,
+              "support": 332
+            }
+          }
+        },
+        "Random Forest": {
+          "accuracy": 0.7484939759036144,
+          "macro_f1": 0.7042260811244277,
+          "roc_auc": 0.8870559785418578,
+          "dropout_recall": 0.7276995305164319,
+          "dropout_precision": 0.8288770053475936,
+          "dropout_f1": 0.775,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.8288770053475936,
+              "recall": 0.7276995305164319,
+              "f1": 0.775,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.42424242424242425,
+              "recall": 0.5882352941176471,
+              "f1": 0.49295774647887325,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.8717948717948718,
+              "recall": 0.8192771084337349,
+              "f1": 0.84472049689441,
+              "support": 332
+            }
+          }
+        },
+        "XGBoost": {
+          "accuracy": 0.733433734939759,
+          "macro_f1": 0.6891268490541549,
+          "roc_auc": 0.8807560225280889,
+          "dropout_recall": 0.7183098591549296,
+          "dropout_precision": 0.8052631578947368,
+          "dropout_f1": 0.7593052109181141,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.8052631578947368,
+              "recall": 0.7183098591549296,
+              "f1": 0.7593052109181141,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.40718562874251496,
+              "recall": 0.5714285714285714,
+              "f1": 0.4755244755244755,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.8664495114006515,
+              "recall": 0.8012048192771084,
+              "f1": 0.8325508607198748,
+              "support": 332
+            }
+          }
+        },
+        "MLP (deep learning)": {
+          "accuracy": 0.733433734939759,
+          "macro_f1": 0.691197251258227,
+          "roc_auc": 0.8773972323229237,
+          "dropout_recall": 0.7370892018779343,
+          "dropout_precision": 0.7969543147208121,
+          "dropout_f1": 0.7658536585365854,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.7969543147208121,
+              "recall": 0.7370892018779343,
+              "f1": 0.7658536585365854,
+              "support": 213
+            },
+            "Enrolled": {
+              "precision": 0.40828402366863903,
+              "recall": 0.5798319327731093,
+              "f1": 0.4791666666666667,
+              "support": 119
+            },
+            "Graduate": {
+              "precision": 0.8758389261744967,
+              "recall": 0.786144578313253,
+              "f1": 0.8285714285714286,
+              "support": 332
+            }
+          },
+          "train_seconds": 8.0,
+          "best_epoch": 20
+        }
+      },
+      "full_mlp_metrics": {
+        "accuracy": 0.733433734939759,
+        "macro_f1": 0.691197251258227,
+        "per_class": {
+          "Dropout": {
+            "precision": 0.7969543147208121,
+            "recall": 0.7370892018779343,
+            "f1": 0.7658536585365854,
+            "support": 213
+          },
+          "Enrolled": {
+            "precision": 0.40828402366863903,
+            "recall": 0.5798319327731093,
+            "f1": 0.4791666666666667,
+            "support": 119
+          },
+          "Graduate": {
+            "precision": 0.8758389261744967,
+            "recall": 0.786144578313253,
+            "f1": 0.8285714285714286,
+            "support": 332
+          }
+        },
+        "roc_auc": 0.8773972323229237
+      },
+      "permutation_importance_top10": [
+        {
+          "feature": "Curricular units 2nd sem (approved)",
+          "importance": 0.19295255881854123,
+          "std": 0.008714093602174093
+        },
+        {
+          "feature": "Curricular units 1st sem (approved)",
+          "importance": 0.09180449777162436,
+          "std": 0.00926415717263411
+        },
+        {
+          "feature": "Tuition fees up to date",
+          "importance": 0.0315116873409238,
+          "std": 0.010638485173591148
+        },
+        {
+          "feature": "Curricular units 2nd sem (enrolled)",
+          "importance": 0.020162219147699872,
+          "std": 0.009445480793605089
+        },
+        {
+          "feature": "Course",
+          "importance": 0.01875222944319005,
+          "std": 0.010525359766168174
+        },
+        {
+          "feature": "Curricular units 2nd sem (evaluations)",
+          "importance": 0.01828585298359244,
+          "std": 0.007686172755535622
+        },
+        {
+          "feature": "Debtor",
+          "importance": 0.015411042850173159,
+          "std": 0.00717669046978309
+        },
+        {
+          "feature": "Curricular units 2nd sem (grade)",
+          "importance": 0.013471995570683959,
+          "std": 0.0029189965407588245
+        },
+        {
+          "feature": "Age at enrollment",
+          "importance": 0.008566642067096841,
+          "std": 0.0028967533003734763
+        },
+        {
+          "feature": "Curricular units 1st sem (evaluations)",
+          "importance": 0.007189963703996567,
+          "std": 0.010499478767948718
+        }
+      ],
+      "shap_top10": null,
+      "tuned_params": null
+    }
+  }
+}

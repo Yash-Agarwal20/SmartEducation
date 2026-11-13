@@ -1,0 +1,103 @@
+{
+  "module": "attendance",
+  "source": "simulated",
+  "label_definition": "final attendance < 75%",
+  "n_rows": 3000,
+  "at_risk_rate": 0.32133333333333336,
+  "observed_weeks": 8,
+  "n_train": 2099,
+  "n_val": 451,
+  "n_test": 450,
+  "test": {
+    "Logistic Regression": {
+      "accuracy": 0.8955555555555555,
+      "precision": 0.788235294117647,
+      "recall": 0.9241379310344827,
+      "f1": 0.8507936507936508,
+      "roc_auc": 0.9732730356133409,
+      "pr_auc": 0.9525726626788064,
+      "threshold": 0.4499999999999999
+    },
+    "Random Forest": {
+      "accuracy": 0.9044444444444445,
+      "precision": 0.8148148148148148,
+      "recall": 0.9103448275862069,
+      "f1": 0.8599348534201955,
+      "roc_auc": 0.9705370265686829,
+      "pr_auc": 0.9483074770133635,
+      "threshold": 0.41999999999999993
+    },
+    "XGBoost": {
+      "accuracy": 0.8711111111111111,
+      "precision": 0.7514450867052023,
+      "recall": 0.896551724137931,
+      "f1": 0.8176100628930818,
+      "roc_auc": 0.9672583380440927,
+      "pr_auc": 0.9455080990907712,
+      "threshold": 0.35999999999999993
+    },
+    "MLP (flattened)": {
+      "accuracy": 0.8777777777777778,
+      "precision": 0.7556818181818182,
+      "recall": 0.9172413793103448,
+      "f1": 0.8286604361370716,
+      "roc_auc": 0.9649745618993782,
+      "pr_auc": 0.9399258167166602,
+      "threshold": 0.3499999999999999,
+      "train_seconds": 3.6
+    },
+    "BiLSTM + static (deep learning)": {
+      "accuracy": 0.9,
+      "precision": 0.7906976744186046,
+      "recall": 0.9379310344827586,
+      "f1": 0.8580441640378549,
+      "roc_auc": 0.9725042396834369,
+      "pr_auc": 0.9512189384400485,
+      "threshold": 0.4099999999999999,
+      "train_seconds": 5.9,
+      "best_epoch": 9
+    }
+  },
+  "importance_top10": [
+    {
+      "feature": "attendance_pct",
+      "importance": 0.2002616812534446
+    },
+    {
+      "feature": "lms_logins",
+      "importance": 0.02058101830225496
+    },
+    {
+      "feature": "assignment_rate",
+      "importance": 0.012762313889106735
+    },
+    {
+      "feature": "commute_km",
+      "importance": 0.007338610482353639
+    },
+    {
+      "feature": "works_part_time",
+      "importance": 0.006719485370558687
+    },
+    {
+      "feature": "age",
+      "importance": 0.005365343401839103
+    },
+    {
+      "feature": "semester",
+      "importance": 0.005200149616697066
+    },
+    {
+      "feature": "scholarship",
+      "importance": 0.004786462505095793
+    },
+    {
+      "feature": "hostel",
+      "importance": 0.00465954363316996
+    },
+    {
+      "feature": "prev_sem_attendance",
+      "importance": 0.0032486299525771754
+    }
+  ]
+}
